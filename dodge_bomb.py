@@ -26,8 +26,8 @@ def game_over(screen, kk_rct):
     screen.blit(sad_kk_img, kk_rct)
 
     # Game Overの文字を表示
-    font = pg.font.Font(None, 80)
-    text = font.render("Game Over", True, (255, 0, 0))
+    font = pg.font.Font(None, 80)  # 文字の大きさ
+    text = font.render("Game Over", True, (255, 0, 0))  #
     text_rct = text.get_rect(center=(WIDTH // 2, HEIGHT // 2))
     screen.blit(text, text_rct)
 
@@ -36,6 +36,7 @@ def game_over(screen, kk_rct):
 
     # 5秒間表示する
     time.sleep(5)
+
     
 
     
