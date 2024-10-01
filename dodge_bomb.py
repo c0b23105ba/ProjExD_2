@@ -13,8 +13,13 @@ DELTA ={pg.K_UP:(0,-5),
         }
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
-def game_over(screen, kk_rct):
-    """ゲームオーバー時の画面を表示"""
+
+def game_over(screen:pg.surface, kk_rct:pg.surface):
+    """
+    ゲームオーバー時の画面を表示
+    screenは画面全体を表している
+    kk_rctはこうかとんを表示している
+    """
     # 背景を黒にする
     blackout = pg.Surface((WIDTH, HEIGHT))
     blackout.fill((0, 0, 0))
@@ -36,8 +41,6 @@ def game_over(screen, kk_rct):
 
     # 5秒間表示する
     time.sleep(5)
-
-    
 
     
 def check_bound(obj_rct:pg.Rect) -> tuple[bool,bool]:
